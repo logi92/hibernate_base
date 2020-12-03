@@ -85,11 +85,11 @@ public class Repository {
             return;
         }
         products = consumer.getProducts();
-        session.getTransaction().commit();
         System.out.println("\nСписок продуктов которые приобрел покупатель " + consumerName + " :");
         for (Product p : products) {
             System.out.println(p);
         }
+        session.getTransaction().commit();
     }
 
     public static void findConsumerByProductName(String productName) {
@@ -105,11 +105,11 @@ public class Repository {
             return;
         }
         consumers = product.getConsumers();
-        session.getTransaction().commit();
         System.out.println("\nПокупатели которые приобрели " + productName + " :");
         for (Consumer c : consumers) {
             System.out.println(c);
         }
+        session.getTransaction().commit();
     }
 
     public static void removeConsumer(String consumerName) {

@@ -19,7 +19,7 @@ public class Product {
     @Column(name = "price")
     private float price;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "consumer_product",
             joinColumns = @JoinColumn(name = "product_id"),

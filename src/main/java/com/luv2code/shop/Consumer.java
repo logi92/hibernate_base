@@ -16,7 +16,7 @@ public class Consumer {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "consumer_product",
             joinColumns = @JoinColumn(name = "consumer_id"),
